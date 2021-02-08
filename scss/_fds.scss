@@ -11,14 +11,20 @@
   --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
   --radius: 10px;
 
+  /* Font sizes in rem's */
+  --rs-08: 0.5rem;
+  --rs-12: 0.75rem;
   --rs-14: 0.875rem;
   --rs-16: 1rem;
   --rs-40: 2.5rem;
   --rs-48: 3rem;
+  --rs-72: 4.5rem;
 
   --spacer: var(--rs-16);
 
   --ff-base: "Raleway", sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
 
   /* Styling */
 
@@ -36,6 +42,9 @@
    */
   width: clamp(20.38rem, 31vw, 57.5rem);
 
+  font-family: var(--ff-base);
+  font-size: var(--rs-14);
+  font-weight: var(--fw-normal);
   color: var(--clr-fg);
 }
 
@@ -80,11 +89,74 @@
 
 /* indicator */
 .fds-Indicator {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   min-width: 326px;
   min-height: 160px;
 
   box-shadow: var(--shadow);
   border-radius: var(--radius);
+
+  text-align: center;
+}
+
+.fds-Indicator p > span {
+  font-weight: var(--fw-bold);
+}
+
+.fds-Indicator p > em {
+  font-size: var(--rs-12);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* bar */
+.fds-Indicator_bar progress {
+  /* width sizing 
+     
+     min: 262px/326px = 80.37%, 262/16 = 16.375rem
+     max: 459px/540px = 85%, 459/16 = 28.69rem
+     diff: 85% - 80.37%  = 4.63%
+     avg: 80.37% + (4.63/2) = 83%
+   */
+  width: clamp(16rem, 83%, 29rem);
+  height: 20px;
+}
+
+/* callout */
+.fds-Indicator_callout {
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 179px;
+  height: 72px;
+  margin: 0;
+
+  background-color: var(--clr-fg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  color: var(--clr-icon-bg);
+  transform: translate(-50%, -50%);
+}
+
+.fds-Indicator_callout > strong {
+  margin-right: var(--rs-08);
+  font-size: var(--rs-40);
+  line-height: var(--rs-72);
+}
+
+.fds-Indicator_callout > em {
+  opacity: 50%;
 }
 
 /* -- Media Queries -- */

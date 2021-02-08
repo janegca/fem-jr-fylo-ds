@@ -32,3 +32,7 @@ Your users should be able to:
 
 - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
 - Weights: 400, 700
+
+References:
+
+- [The HTML5 Progress Element](https://css-tricks.com/html5-progress-element/)
