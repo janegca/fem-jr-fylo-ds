@@ -19,6 +19,10 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   min-height: 100vh;
 
@@ -36,12 +40,12 @@ body {
   place-content: center;
 
   max-width: 90rem;
+  min-height: 100vh;
   padding: 2vmin;
   margin: auto;
-
-  outline: 1px solid white;
 }
 
+/* -- Attribution -- */
 .attribution {
   position: absolute;
   bottom: 0;

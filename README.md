@@ -14,7 +14,7 @@ Your users should be able to:
 | ------------- | ---------------------- | ------- | -------------------------- |
 | wrapper       | generic                | div     | .fds .attribution          |
 | fds           | namespace              | main    | .fds-Header .fds-Indicator |
-| fds-Header    | page header            | header  | logo icons                 |
+| fds-Header    | page header            | header  | img .icons                 |
 | fds-Indicator | data storage indicator | article | ??                         |
 
 ## Colors
