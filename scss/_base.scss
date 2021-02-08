@@ -22,7 +22,11 @@ html {
 body {
   min-height: 100vh;
 
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--clr-bg);
+
   color: var(--clr-fg);
   margin: 0;
 }
@@ -53,4 +57,14 @@ body {
 }
 .attribution a {
   color: #ddd;
+}
+
+/*-- Media Query -- */
+@media (min-width: 30rem) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom 0% right 100%;
+  }
 }
