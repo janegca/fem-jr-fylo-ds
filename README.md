@@ -10,12 +10,12 @@ Your users should be able to:
 
 ## Visual Components
 
-| Class         | Description            | Tag | Element(s)                 |
-| ------------- | ---------------------- | --- | -------------------------- |
-| wrapper       | generic                | div | .fds .attribution          |
-| fds           | namespace              | div | .fds-Header .fds-Indicator |
-| fds-Header    | page header            | div | logo icons                 |
-| fds-Indicator | data storage indicator | div | ??                         |
+| Class         | Description            | Tag     | Element(s)                 |
+| ------------- | ---------------------- | ------- | -------------------------- |
+| wrapper       | generic                | div     | .fds .attribution          |
+| fds           | namespace              | main    | .fds-Header .fds-Indicator |
+| fds-Header    | page header            | header  | logo icons                 |
+| fds-Indicator | data storage indicator | article | ??                         |
 
 ## Colors
 

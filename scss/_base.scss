@@ -1,0 +1,56 @@
+/* -- Custom Properties -- */
+
+:root {
+  --clr-bg: hsl(224, 61%, 15%);
+  --clr-fg: white;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* ensure user font-size choice is the default
+     starting point */
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: var(--clr-bg);
+  color: var(--clr-fg);
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+
+  max-width: 90rem;
+  padding: 2vmin;
+  margin: auto;
+
+  outline: 1px solid white;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  margin-bottom: 2vmin;
+
+  font-size: small;
+  color: #ccc;
+  text-align: center;
+
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: #ddd;
+}
