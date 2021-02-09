@@ -1,0 +1,44 @@
+/* -- Fylo Data Storage Header Component -- */
+
+.fds-Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  min-width: 100%;
+  min-height: 12.5em;
+  padding-left: var(--rs-40);
+  margin-bottom: var(--spacer);
+
+  box-shadow: var(--shadow);
+  border-radius: var(--radius) 100px var(--radius) var(--radius);
+}
+
+.fds-Header .icons {
+  display: flex;
+}
+
+.fds-Header .icons > div {
+  display: grid;
+  place-content: center;
+
+  width: var(--rs-48);
+  height: var(--rs-48);
+
+  background-color: var(--clr-icon-bg);
+}
+
+.fds-Header .icons > div + div {
+  margin-left: var(--spacer);
+}
+
+/* -- Media Queries -- */
+
+@media (min-width: 40rem) {
+  .fds-Header {
+    max-width: 350px;
+    margin-right: var(--spacer);
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,117 @@
+/* -- Fylo Data Storage Indicator Component -- */
+.fds-Indicator {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  min-width: 326px;
+  min-height: 160px;
+
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+
+  text-align: center;
+}
+
+.fds-Indicator p > span {
+  font-weight: var(--fw-bold);
+}
+
+.fds-Indicator p > em {
+  font-size: var(--rs-12);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+// the progress bar
+//    this will need to be re-thought, a real
+//    site would need it to update with actual
+//    values used and available
+.fds-Indicator_bar > div {
+  position: relative;
+  display: inline-block;
+
+  /* width sizing 
+     
+     min: 262px/326px = 80.37%, 262/16 = 16.375rem
+     max: 459px/540px = 85%, 459/16 = 28.69rem
+     diff: 85% - 80.37%  = 4.63%
+     avg: 80.37% + (4.63/2) = 83%
+   */
+  width: clamp(16rem, 83%, 29rem);
+  height: 20px;
+  border: none;
+  padding: 2px;
+  border-radius: var(--radius);
+  background-color: var(--clr-icon-bg);
+}
+
+// the progress bar fill colour
+.fds-Indicator_bar > div > span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 74%;
+  height: var(--rs-14);
+
+  background-image: var(--gradient);
+  border-radius: var(--radius);
+
+  transform: translateY(-50%);
+}
+
+// the progress bar thumb
+.fds-Indicator_bar .dot {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--clr-fg);
+
+  transform: translate(-50%, -50%);
+}
+
+// the progress bar min/max units
+.fds-Indicator_bar > div > p {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--rs-10);
+}
+
+/* the available storage callout */
+.fds-Indicator_callout {
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 179px;
+  height: 72px;
+  margin: 0;
+
+  background-color: var(--clr-fg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  color: var(--clr-icon-bg);
+  transform: translate(-50%, -50%);
+}
+
+.fds-Indicator_callout > strong {
+  margin-right: var(--rs-08);
+  font-size: var(--rs-40);
+  line-height: var(--rs-72);
+}
+
+.fds-Indicator_callout > em {
+  opacity: 50%;
+}
