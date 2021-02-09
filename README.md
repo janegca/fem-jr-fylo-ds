@@ -33,6 +33,15 @@ Your users should be able to:
 - Family: [Raleway](https://fonts.google.com/specimen/Raleway)
 - Weights: 400, 700
 
-References:
+## Thoughts
 
-- [The HTML5 Progress Element](https://css-tricks.com/html5-progress-element/)
+### Progress Bar
+
+Wasted a ton of time trying to use and style the HTML `progress` element but
+could not get it to match the design. Thought about using the HTML `input` form
+element which might, in the end be the way to go although you'd have to turn off
+it's interactive features; would not want the user to be able to adjust it. In
+the end, styled a `div` with nested `span` elements. Bit of a cheat, but it
+works for now.
+
+References:

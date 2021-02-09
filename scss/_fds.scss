@@ -8,7 +8,7 @@
   --clr-icon-bg: #0c122c;
 
   --shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.25);
-  --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --gradient: linear-gradient(to right, #ffa399 85%, #ff4d97 100%);
   --radius: 10px;
 
   /* Font sizes in rem's */
@@ -114,8 +114,14 @@
   text-transform: uppercase;
 }
 
-/* bar */
-.fds-Indicator_bar progress {
+// the progress bar
+//    this will need to be re-thought, a real
+//    site would need it to update with actual
+//    values used and available
+.fds-Indicator_bar > div {
+  position: relative;
+  display: inline-block;
+
   /* width sizing 
      
      min: 262px/326px = 80.37%, 262/16 = 16.375rem
@@ -125,6 +131,39 @@
    */
   width: clamp(16rem, 83%, 29rem);
   height: 20px;
+  border: none;
+  padding: 2px;
+  border-radius: var(--radius);
+  background-color: var(--clr-icon-bg);
+}
+
+// the fill colour
+.fds-Indicator_bar > div > span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 74%;
+  height: var(--rs-14);
+
+  background-image: var(--gradient);
+  border-radius: var(--radius);
+
+  transform: translateY(-50%);
+}
+
+// the dot
+.fds-Indicator_bar .dot {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--clr-fg);
+
+  transform: translate(-50%, -50%);
 }
 
 /* callout */
