@@ -33,15 +33,6 @@
   flex-direction: column;
   place-content: center;
 
-  /* width sizing 
-     
-     min: 326px/ 375px = 86.9% or 86.9vw, 326/16 = 20.38rem
-     max: 920px/1440px = 69.9% or 63.9vw, 920/16 = 57.5rem
-     diff: (920-326)/(1440-375) = 55.77% or 55.8vw,
-     avg: 87vw - 56vw = 31vw 
-   */
-  width: clamp(20.38rem, 31vw, 57.5rem);
-
   font-family: var(--ff-base);
   font-size: var(--rs-14);
   font-weight: var(--fw-normal);

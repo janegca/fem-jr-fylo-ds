@@ -3,16 +3,21 @@
 .fds-Header {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
 
-  min-width: 100%;
   min-height: 12.5em;
-  padding-left: var(--rs-40);
+  min-width: 326px;
+  padding: var(--rs-40);
+
   margin-bottom: var(--spacer);
 
   box-shadow: var(--shadow);
   border-radius: var(--radius) 100px var(--radius) var(--radius);
+}
+
+.fds-Header > img {
+  margin-bottom: calc(2 * var(--spacer));
 }
 
 .fds-Header .icons {
@@ -37,8 +42,10 @@
 
 @media (min-width: 40rem) {
   .fds-Header {
+    flex: 1;
+
     max-width: 350px;
-    margin-right: var(--spacer);
+    margin-right: calc(2 * var(--spacer));
     margin-bottom: 0;
   }
 }

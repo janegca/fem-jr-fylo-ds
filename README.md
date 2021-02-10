@@ -52,4 +52,23 @@ drawing board. The .fds-Header does not respect the `max-width` setting,
 probably because the content size never grows and so doesn't trigger it, so it's
 taking up all the extra space when the page grows ☹️
 
+- the `clamp` isn't being respected, why?
+  - on`.fds` - it does not grow to its `max-width`, and its contents overflow
+- `.fds-Header` `max-width` not respected, why?
+  - removed the `min-width` setting and everything is ok in small size but
+    component shrinks instead of growing in larger screen size; setting
+    `max-width` in the media query has no effect
+- opposite problem with `.fds-Indicator`, it doesn't grow at all for larger
+  screens, remains fixed
+
+✔️FIX:
+
+- changed `main` layout from `grid` to `flex` - `.fds` now grows
+- removed all size settings on `.fds`
+- added `flex: 1` to `.fds-Header` and `flex: 2` to `.fds-Indicator`
+- removed all width settings on `.fds-Header` and `.fds-Indicator` then set
+  `min-height` and `min-width` on both for basic sizing, adding `max-width`
+  values to their media queries
+- adjusted `padding` on `.fds-Header`
+
 References:

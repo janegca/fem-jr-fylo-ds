@@ -34,12 +34,13 @@ body {
 }
 
 main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-content: center;
 
   max-width: 90rem;
   min-height: 100vh;
-  padding: 2vmin;
+  padding: 2vw;
   margin: auto;
 }
 

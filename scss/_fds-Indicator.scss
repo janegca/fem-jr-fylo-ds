@@ -5,8 +5,17 @@
   flex-direction: column;
   justify-content: space-around;
 
-  min-width: 326px;
+  /* width sizing 
+     
+     min: 326px/ 375px = 86.93%, 325/16 = 20.375rem
+     max: 540px/1440px = 37.5%,  540/16 = 33.75rem
+     diff: 86.90 - 37.5 = 49.4 / 2 = 24.7
+     avg: 86.93 - 24.7 = 62.23
+   */
+  // width: clamp(21rem, 62vw, 34rem);
+
   min-height: 160px;
+  min-width: 326px;
 
   box-shadow: var(--shadow);
   border-radius: var(--radius);
@@ -26,9 +35,6 @@
 }
 
 // the progress bar
-//    this will need to be re-thought, a real
-//    site would need it to update with actual
-//    values used and available
 .fds-Indicator_bar > div {
   position: relative;
   display: inline-block;
@@ -41,6 +47,7 @@
      avg: 80.37% + (4.63/2) = 83%
    */
   width: clamp(16rem, 83%, 29rem);
+
   height: 20px;
   border: none;
   padding: 2px;
@@ -128,4 +135,13 @@
 
 .fds-Indicator_callout > em {
   opacity: 50%;
+}
+
+/* -- Media Query -- */
+@media (min-width: 40rem) {
+  .fds-Indicator {
+    flex: 2;
+
+    max-width: 540px;
+  }
 }
