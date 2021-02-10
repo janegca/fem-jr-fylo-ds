@@ -106,6 +106,20 @@
   transform: translate(-50%, -50%);
 }
 
+.fds-Indicator_callout::after {
+  content: "";
+  position: absolute;
+  top: 85%;
+  right: 0;
+
+  border-style: solid;
+  border-color: transparent;
+  /* top | right | bottom | left */
+  border-width: 32px 0 32px 35px;
+  border-top-color: white;
+  // visibility: hidden;
+}
+
 .fds-Indicator_callout > strong {
   margin-right: var(--rs-08);
   font-size: var(--rs-40);
