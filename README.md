@@ -46,4 +46,11 @@ it's interactive features; would not want the user to be able to adjust it. In
 the end, styled a `div` with nested `span` elements. Bit of a cheat, but it
 works for now.
 
+### Desktop Layout
+
+Having real problems with this, think it's due to my width settings; back to the
+drawing board. The .fds-Header does not respect the `max-width` setting,
+probably because the content size never grows and so doesn't trigger it, so it's
+taking up all the extra space when the page grows ☹️
+
 References:
