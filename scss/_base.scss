@@ -8,7 +8,7 @@
 html {
   box-sizing: border-box;
 
-  /* ensure user font-size choice is the default
+  /* ensure the user font-size choice is the default
      starting point */
   font-size: 1rem;
 }
@@ -24,8 +24,6 @@ img {
 }
 
 body {
-  min-height: 100vh;
-
   background-image: url("../images/bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,7 +62,7 @@ footer > a {
 }
 
 /*-- Media Query -- */
-@media (min-width: 30rem) {
+@media (min-width: 40rem) {
   body {
     background-image: url("../images/bg-desktop.png");
     background-repeat: no-repeat;

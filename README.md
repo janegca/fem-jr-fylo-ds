@@ -12,8 +12,7 @@ Your users should be able to:
 
 | Class                 | Description            | Tag     | Element(s)                 |
 | --------------------- | ---------------------- | ------- | -------------------------- |
-| wrapper               | generic                | div     | .fds .attribution          |
-| fds                   | namespace              | main    | .fds-Header .fds-Indicator |
+| fds                   | namespace              | article | .fds-Header .fds-Indicator |
 | fds-Header            | page header            | header  | img .icons                 |
 | fds-Indicator         | data storage indicator | article | p[span] \_bar \_callout    |
 | fds-Indicator_bar     | the progress bar       | div     | [div span .dot p em]       |
