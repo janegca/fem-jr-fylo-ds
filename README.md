@@ -71,4 +71,11 @@ taking up all the extra space when the page grows ☹️
   values to their media queries
 - adjusted `padding` on `.fds-Header`
 
+### Afterthoughts
+
+Caused most of the problems on this by getting ahead of myself and trying to be
+too cute with layouts and `clamp` -- KISS is always best
+
 References:
+
+- [Min and Max Width/Height in CSS](https://www.ishadeed.com/article/min-max-css/)
