@@ -12,9 +12,9 @@ Your users should be able to:
 
 | Class                 | Description            | Tag     | Element(s)                 |
 | --------------------- | ---------------------- | ------- | -------------------------- |
-| fds                   | namespace              | article | .fds-Header .fds-Indicator |
+| fds                   | namespace              | div     | .fds-Header .fds-Indicator |
 | fds-Header            | page header            | header  | img .icons                 |
-| fds-Indicator         | data storage indicator | article | p[span] \_bar \_callout    |
+| fds-Indicator         | data storage indicator | div     | p[span] \_bar \_callout    |
 | fds-Indicator_bar     | the progress bar       | div     | [div span .dot p em]       |
 | fds-Indicator_callout | available storage      | p       | strong em                  |
 
